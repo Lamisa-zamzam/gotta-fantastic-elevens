@@ -1,0 +1,29 @@
+.brand-english {
+    font-size: 15px;
+}
+
+.brand-name {
+    color: magenta !important;
+    font-weight: 900;
+    font-family: cursive;
+}
+
+.nav-item {
+    margin-left: 50px;
+    padding: 23px;
+    border-radius: 3px;
+}
+
+.nav-item:hover {
+    background-color: lightgray;
+}
+
+.nav-icon {
+    font-size: 60px;
+    margin-right: 10px;
+    color: white;
+}
+
+.nav-form{
+    margin-left: 130px;
+}

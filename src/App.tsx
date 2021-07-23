@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import MyCarousel from "./Components/MyCarousel/MyCarousel";
+import MyContainer from "./Components/MainContainer/MainContainer";
+import MyNavbar from "./Components/MyNavbar/MyNavbar";
+
+export interface IPlayer {
+    id: number;
+    name: string;
+    country: string;
+    salary: string;
+    club: string;
+    age: number;
+    height: number;
+    img: string;
+    jerseyNumber: number;
+    position: string;
+    contractExpairy: string;
+    trophies: number;
+    matches: number;
+    transferFee: string;
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div>
+            {/* Navigation bar */}
+            <MyNavbar />
+
+            {/* Carousel */}
+            <MyCarousel />
+
+            {/* Main content including team and players */}
+            <MyContainer />
+        </div>
+    );
 }
 
 export default App;

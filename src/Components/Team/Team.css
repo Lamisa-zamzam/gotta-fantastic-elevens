@@ -1,0 +1,26 @@
+.team {
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.team h1 {
+    color: green;
+}
+
+.team h4 {
+    margin: 70px 0px 20px 0px;
+    color: fuchsia;
+    font-size: 30px;
+}
+
+.selected-players {
+    margin-top: 20px;
+    border-bottom: 1px solid rgb(218, 215, 215);
+    display: grid;
+    grid-template-columns: 20% 70%;
+    gap: 5%;
+}

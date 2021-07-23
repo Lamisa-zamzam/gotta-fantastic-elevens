@@ -1,0 +1,5 @@
+.container-div {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
