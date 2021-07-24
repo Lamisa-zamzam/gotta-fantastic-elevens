@@ -19,8 +19,10 @@ const MyNavbar = ({ searchString, setSearchString }: IProps) => {
         <Navbar bg="dark" variant="dark">
             <FontAwesomeIcon icon={faFutbol} className="nav-icon" />
             <Navbar.Brand href="#home" className="brand-name">
-                gotta fantastic elevens <br />{" "}
-                <span className="brand-english">The Dream Team</span>{" "}
+                gotta fantastic 11s
+                <br /> <span className="brand-english">
+                    The Dream Team
+                </span>{" "}
             </Navbar.Brand>
             <Nav className="mr-auto">
                 <Nav.Link href="#home" className="nav-item">
