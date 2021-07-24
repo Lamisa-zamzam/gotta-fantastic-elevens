@@ -1,21 +1,19 @@
 // Style Sheet
 import "./MyNavbar.css";
 // React Bootstrap
-import {
-    Navbar,
-    Nav,
-    Form,
-    FormControl,
-    Button,
-    Row,
-    Col,
-} from "react-bootstrap";
+import { Navbar, Nav, Form, FormControl, Row, Col } from "react-bootstrap";
 
 // Font Awesome Icons
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFutbol } from "@fortawesome/free-solid-svg-icons";
 
-const MyNavbar = () => {
+// Prop Type
+interface IProps {
+    searchString: string;
+    setSearchString: React.Dispatch<React.SetStateAction<string>>;
+}
+
+const MyNavbar = ({ searchString, setSearchString }: IProps) => {
     return (
         <Navbar bg="dark" variant="dark">
             <FontAwesomeIcon icon={faFutbol} className="nav-icon" />
@@ -46,22 +44,17 @@ const MyNavbar = () => {
                     Contact Us
                 </Nav.Link>
             </Nav>
-            {/* Disabled button and form */}
             <Form className="nav-form">
                 <Row>
                     <Col>
                         {" "}
                         <FormControl
+                            value={searchString}
                             type="text"
                             placeholder="Search"
                             className="mr-sm-2"
-                            disabled
+                            onChange={(e) => setSearchString(e.target.value)}
                         />
-                    </Col>
-                    <Col>
-                        <Button variant="outline-info" disabled>
-                            Search
-                        </Button>
                     </Col>
                 </Row>
             </Form>

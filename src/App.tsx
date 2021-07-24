@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import MyNavbar from "./Components/MyNavbar/MyNavbar";
 import MyCarousel from "./Components/MyCarousel/MyCarousel";
 import MyContainer from "./Components/MainContainer/MainContainer";
+import { useState } from "react";
 
 // Player Interface to be used from different components
 export interface IPlayer {
@@ -24,16 +25,19 @@ export interface IPlayer {
 }
 
 const App = () => {
+    // Search string
+    const [searchString, setSearchString] = useState("");
+
     return (
         <>
             {/* Navigation bar */}
-            <MyNavbar />
+            <MyNavbar searchString={searchString} setSearchString={setSearchString}/>
 
             {/* Carousel */}
             <MyCarousel />
 
             {/* Main content including the team and players */}
-            <MyContainer />
+            <MyContainer searchString={searchString}/>
         </>
     );
 };

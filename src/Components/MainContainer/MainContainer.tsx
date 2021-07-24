@@ -9,7 +9,12 @@ import playersData from "../../PlayersData/PlayersData.json";
 // Player Interface
 import { IPlayer } from "../../App";
 
-const MyContainer = () => {
+// Prop Interface
+interface IProps {
+    searchString: string;
+}
+
+const MyContainer = ({ searchString }: IProps) => {
     // Initial states
     // All the players available in the JSON file
     const [playersInfo, setPlayersInfo] = useState<IPlayer[]>([]);
@@ -22,6 +27,14 @@ const MyContainer = () => {
     useEffect(() => {
         setPlayersInfo(playersData);
     }, []);
+
+    useEffect(() => {
+        setPlayersInfo(
+            playersData.filter((player) =>
+                player.name.toLowerCase().includes(searchString.toLowerCase())
+            )
+        );
+    }, [searchString]);
 
     // Handling adding player to the team
     const addPlayer = (newPlayer: IPlayer) => {
@@ -60,6 +73,7 @@ const MyContainer = () => {
                 players={playersInfo}
                 addPlayer={addPlayer}
                 removePlayer={removePlayer}
+                team={team}
             />
         </div>
     );
