@@ -49,7 +49,7 @@ const MyContainer = ({ searchString }: IProps) => {
         } else {
             // Keep all the existing players in the team and add the new one
             setTeam([...team, newPlayer]);
-            // Keep all the existing player ids in the team and add the new one
+            // update the players ids state
             setPlayersId([...playersId, newPlayer.id]);
         }
     };
