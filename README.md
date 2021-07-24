@@ -9,9 +9,9 @@ This is a website for football teams to begin their journey in the world of foot
 My project includes:
 
 1. [React.js](https://reactjs.org/),
-2. [TypeScript](),
-3. [React Bootstrap]() and
-4. [Font Awesome].
+2. [TypeScript](https://www.typescriptlang.org/),
+3. [React Bootstrap](https://react-bootstrap.github.io/getting-started/introduction/) and
+4. [Font Awesome](https://fontawesome.com/).
 
 #### Road Map:
 
