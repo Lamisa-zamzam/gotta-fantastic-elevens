@@ -9,6 +9,7 @@ interface IProps {
 }
 
 const Team = ({ team }: IProps) => {
+    // Image Style
     const imgStyle = {
         width: "50px",
     };
