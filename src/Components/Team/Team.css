@@ -1,10 +1,12 @@
 .team {
+    /* Stick to top */
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
-    padding: 20px;
+    /* Get Scrolling Facility */
     overflow-y: scroll;
     height: 100vh;
+    padding: 20px;
 }
 
 .team h1 {

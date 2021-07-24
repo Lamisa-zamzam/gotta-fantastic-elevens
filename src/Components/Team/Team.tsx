@@ -1,6 +1,9 @@
 import "./Team.css";
+
+// Player Interface
 import { IPlayer } from "../../App";
 
+// Props Interface
 interface IProps {
     team: IPlayer[];
 }
@@ -33,7 +36,7 @@ const Team = ({ team }: IProps) => {
                         player;
                     return (
                         <div className="selected-players">
-                            <img src={img} alt="" style={imgStyle} />
+                            <img src={img} alt={name} style={imgStyle} />
                             <div>
                                 <h6 key={id}>{name}</h6>
                                 <p key={id}>

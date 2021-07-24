@@ -1,9 +1,11 @@
+// Bootstrap styles
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+// Components
+import MyNavbar from "./Components/MyNavbar/MyNavbar";
 import MyCarousel from "./Components/MyCarousel/MyCarousel";
 import MyContainer from "./Components/MainContainer/MainContainer";
-import MyNavbar from "./Components/MyNavbar/MyNavbar";
 
+// Player Interface to be used from different components
 export interface IPlayer {
     id: number;
     name: string;
@@ -21,19 +23,19 @@ export interface IPlayer {
     transferFee: string;
 }
 
-function App() {
+const App = () => {
     return (
-        <div>
+        <>
             {/* Navigation bar */}
             <MyNavbar />
 
             {/* Carousel */}
             <MyCarousel />
 
-            {/* Main content including team and players */}
+            {/* Main content including the team and players */}
             <MyContainer />
-        </div>
+        </>
     );
-}
+};
 
 export default App;
